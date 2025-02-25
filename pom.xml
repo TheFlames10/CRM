@@ -50,6 +50,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
+      <version>1.18.30</version>
       <optional>true</optional>
     </dependency>
 
@@ -68,6 +69,7 @@
 
   <build>
     <plugins>
+      <!-- Existing Spring Boot Maven Plugin -->
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
@@ -78,6 +80,18 @@
               <artifactId>lombok</artifactId>
             </exclude>
           </excludes>
+        </configuration>
+      </plugin>
+
+      <!-- Add Maven Compiler Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+          <release>11</release>
+          <source>11</source>
+          <target>11</target>
         </configuration>
       </plugin>
     </plugins>

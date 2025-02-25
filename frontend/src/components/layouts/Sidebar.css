@@ -1,0 +1,20 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  transition: all 0.3s;
+}
+
+.nav-link {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
